@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<style>
+		main {
+			display: flex;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+		}
+		header {
+			width:100%;
+			text-align: center;
+			margin-bottom: 3rem;
+		}
+		span {
+			font-size: 2rem;
+		}
+		.line {
+			display: flex;
+		}
+		.box {
+			width: calc(100% / 3);
+			box-sizing: border-box;
+			/*margin-right: 3rem;
+			margin-bottom: 3rem;*/			
+			padding: 3rem;
+			position: relative;
+			display: flex;
+			justify-content: center;-ms-align-items: center;
+			align-items: center;
+		}
+		main {
+			margin: 2rem;
+		}
+		.box:nth-child(2) {
+			border-right: 0.2rem solid black;
+			border-left: 0.2rem solid black;
+		}
+		section:nth-child(2)>.box {
+			border-top: 0.2rem solid black;
+			border-bottom: 0.2rem solid black;
+		}
+		.player_move {
+			position: absolute;
+		}
+		#announce {
+			text-align: center;
+			font-size:3rem;
+			font-family: 'Lora', serif;
+		}
+	</style>
+</head>
+<body>
+	<header><h1>Start Playing</h1></header>
+	<main>
+		<div id="container">
+			<section class="line">
+				<div class="box column_1 row_1"></div>
+				<div class="box column_2 row_1"></div>
+				<div class="box column_3 row_1"></div>
+			</section>
+			<section class="line">
+				<div class="box column_1 row_2"></div>
+				<div class="box column_2 row_2"></div>
+				<div class="box column_3 row_2"></div>
+			</section>
+			<section class="line">
+				<div class="box column_1 row_3"></div>
+				<div class="box column_2 row_3"></div>
+				<div class="box column_3 row_3"></div>
+			</section>
+		</div>
+	</main>
+	<div id="announce">
+		<p></p>
+	</div>
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
