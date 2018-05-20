@@ -42,13 +42,9 @@ function checkWinByColumn () {
 function checkMatch(string){
 	var winningCombos = ['✕✕✕', '◯◯◯']
 	if (string === winningCombos[0]) {
-		console.log('✕ has won the game');
 		announcement("✕");
-		return true;
 	} else if (string === winningCombos[1]) {
-		console.log('◯ has won the game');
 		announcement("◯");
-		return true;
 	}
 }
 
@@ -75,6 +71,6 @@ function checkWinByDiagonal(array) {
 }
 
 function announcement(sign) {
-	$("p").text(sign + " has won this round").appendTo("#announce");
+	$("p").text(sign + " has won this round 😏").appendTo("#announce");
 }
 
