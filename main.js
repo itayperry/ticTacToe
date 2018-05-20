@@ -15,10 +15,17 @@ $(".box").one("click", function(e) {
 
 //var g = jQuery("main").find("> .line")
 function draw(e) {
-	$('<span>', {
+	var colorChosen = "black";
+	if (next == element[0]) {
+		colorChosen = "red"
+	} else {
+		colorChosen = "blue";
+	}
+	var span = $('<span>', {
 		text: next, 
 		class: "player_move", 
-	}).appendTo(e.target);
+	}).css("color", colorChosen)
+	span.appendTo(e.target)
 }
 function checkWinByColumn () {
 	for(let i = 0; i <= 2; i++){
